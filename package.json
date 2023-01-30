@@ -1,5 +1,5 @@
 {
-  "name": "express-parameter-polution-preventer",
+  "name": "@justcallmesu/express-parameter-polution-preventer",
   "version": "1.0.0",
   "description": "This is an express parameter polution preventer package",
   "main": "index.js",
@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "justcallmesu",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justcallmesu/express-parameter-polution-preventer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Justcallmesu/express-parameter-polution-preventer/issues"
+  },
+  "homepage": "https://github.com/Justcallmesu/express-parameter-polution-preventer#readme"
 }
