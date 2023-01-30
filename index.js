@@ -1,4 +1,4 @@
-const ErrorClass = require(`${__dirname}modules/class/ErrorHandler.js`);
+const ErrorClass = require(`${__dirname}/modules/class/ErrorHandler.js`);
 
 function parameterPolutionPrevent() {
     return (req, res, next) => {

@@ -1,2 +1,5 @@
 # express-parameter-polution-preventer
-"This is an express parameter polution preventer package"
+
+this is an express parameter polution preventer
+
+works array nested in an object query
