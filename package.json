@@ -1,0 +1,11 @@
+{
+  "name": "express-parameter-polution-preventer",
+  "version": "1.0.0",
+  "description": "This is an express parameter polution preventer package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "justcallmesu",
+  "license": "ISC"
+}
