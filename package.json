@@ -1,5 +1,5 @@
 {
-  "name": "express-parameter-polution-preventer",
+  "name": "express-parameter-polution",
   "version": "1.0.0",
   "description": "This is an express parameter polution preventer package",
   "main": "index.js",
