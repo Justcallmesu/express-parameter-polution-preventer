@@ -62,6 +62,7 @@ app.use(EPPP(
     {
         // Join The Array Parameter
         // Pass an boolean value or pass an Array to customize which parameter you want to join
+        // if your join boolean value is false it will take the first element in Array Query value
         // !!! if the parameter name is not within your given array, your parameter will stay in array form BECAREFUL
         
         join:false,
