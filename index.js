@@ -1,24 +1,23 @@
-const ErrorClass = require(`${__dirname}modules/class/ErrorHandler.js`);
+const ErrorClass = require(`${__dirname}/modules/class/ErrorHandler.js`);
 
-function parameterPolutionPrevent() {
+function parameterPolutionPrevent(options) {
     return (req, res, next) => {
+        const ObjectQuery = [];
+        const keys = [];
+
         Object.keys(req.query).map(key => {
             if (Array.isArray(req.query[key])) {
                 req.query[key] = req.query[key].join(" ");
             }
 
             if (typeof req.query[key] !== "string" && typeof req.query[key] === "object") {
-                const values = Object.values(req.query[key]);
-                if (Array.isArray(...values)) {
-                    req.query[key] = values.pop().join(" ");
-                    return;
-                }
-
-                if (typeof values.pop() !== "string") {
-                    throw new ErrorClass(400, "Bad Parameter");
-                }
+                ObjectQuery.push({ ...req.query[key], origin: key });
+                keys.push(Object.keys(req.query[key]));
             }
         });
+
+        sanitizeObjectQuery(req, ObjectQuery, keys, 0, 0, 0, options);
+
         next();
     };
 };
