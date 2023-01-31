@@ -22,7 +22,9 @@ function parameterPolutionPrevent(options) {
             }
         });
 
-        sanitizeObjectQuery(req, ObjectQuery, keys, 0, 0, 0, options);
+        if (ObjectQuery.length) {
+            sanitizeObjectQuery(req, ObjectQuery, keys, 0, 0, 0, options);
+        }
 
         next();
     };
