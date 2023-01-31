@@ -1,4 +1,5 @@
 const ErrorClass = require(`${__dirname}/modules/class/ErrorHandler.js`);
+const sanitizeObjectQuery = require(`${__dirname}/modules/functions/SanitizeObjectQuery.js`);
 
 function parameterPolutionPrevent(options) {
     return (req, res, next) => {
