@@ -3,12 +3,12 @@ const sanitizeObjectQuery = require(`${__dirname}/modules/functions/SanitizeObje
 
 function parameterPolutionPrevent(options) {
     return (req, res, next) => {
-        const { join, whitelist } = options;
+        const { join, whitelist = [] } = options;
         const ObjectQuery = [];
         const keys = [];
 
         Object.keys(req.query).map(keys => {
-            if (!whitelist.includes(keys) && Array.isArray(req.query[keys])) {
+            if (!whitelist?.includes(keys) && Array.isArray(req.query[keys])) {
                 if (Array.isArray(whitelist)) {
                     req.query[keys] = join.includes(keys) ? req.query[keys].join(" ") : req.query[keys][0];
                 } else {
