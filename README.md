@@ -7,7 +7,7 @@ works array nested in an object query
 install it
 
 ```
-npm i @justcallmesu/express-parameter-polution-preventer
+npm i express-parameter-polution-preventer
 ```
 
 and then Just import it
@@ -15,7 +15,7 @@ and then Just import it
 CJS :
 
 ```
-const EPPP = require("@justcallmesu/express-parameter-polution-preventer");
+const EPPP = require("express-parameter-polution-preventer");
 ```
 
 or
@@ -23,7 +23,7 @@ or
 ES6 :
 
 ```
-import EPPP from "@justcallmesu/express-parameter-polution-preventer";
+import EPPP from "express-parameter-polution-preventer";
 ```
 
 then use it with
@@ -64,7 +64,7 @@ app.use(EPPP(
         // Pass an boolean value or pass an Array to customize which parameter you want to join
         // if your join boolean value is false it will take the first element in Array Query value
         // !!! if the parameter name is not within your given array, your parameter will stay in array form BECAREFUL
-        
+
         join:false,
 
         // White list just to skip some parameter if the properties name is within your given array
