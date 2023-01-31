@@ -60,11 +60,13 @@ app.use(EPPP(
 ```
 app.use(EPPP(
     {
-        // Join The Array Paramter
-        // Pass an boolean value or pass an Array to customize which parameter you only want to join
+        // Join The Array Parameter
+        // Pass an boolean value or pass an Array to customize which parameter you want to join
+        // !!! if the parameter name is not within your given array, your parameter will stay in array form BECAREFUL
+        
         join:false,
 
-        // White list just skip parameter if the properties name is same within passed array
+        // White list just to skip some parameter if the properties name is within your given array
         whitelist: ["price"]
     }
 ))
@@ -73,4 +75,4 @@ app.use(EPPP(
 and done, now your server is protected :)
 \*probably
 
-# may not maintained for a long time Sorry
+###### may not maintained for a long time Sorry
