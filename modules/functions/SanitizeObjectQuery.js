@@ -7,7 +7,7 @@ function sanitizeObjectQuery(req, QueryObject, keysArray, ObjectIndex, ArrayInde
 
     if (!whitelist.includes(origin) && Array.isArray(data[keys])) {
         if (Array.isArray(join)) {
-            req.query[origin][keys] = join || join?.includes(origin) ? data[keys].join(" ") : data[keys][0];
+            req.query[origin][keys] = join?.includes(origin) ? data[keys].join(" ") : data[keys][0];
         } else {
             req.query[origin][keys] = join ? data[keys].join(" ") : data[keys][0];
         }

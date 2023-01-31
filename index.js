@@ -5,7 +5,7 @@ function parameterPolutionPrevent(options) {
     return (req, res, next) => {
         const { join, whitelist = [] } = options;
         const ObjectQuery = [];
-        const keys = [];
+        const ObjectKeys = [];
 
         Object.keys(req.query).map(keys => {
             if (!whitelist?.includes(keys) && Array.isArray(req.query[keys])) {
@@ -18,12 +18,12 @@ function parameterPolutionPrevent(options) {
 
             if (typeof req.query[keys] !== "string" && typeof req.query[keys] === "object") {
                 ObjectQuery.push({ ...req.query[keys], origin: keys });
-                keys.push(Object.keys(req.query[keys]));
+                ObjectKeys.push(Object.keys(req.query[keys]));
             }
         });
 
         if (ObjectQuery.length) {
-            sanitizeObjectQuery(req, ObjectQuery, keys, 0, 0, 0, options);
+            sanitizeObjectQuery(req, ObjectQuery, ObjectKeys, 0, 0, 0, options);
         }
 
         next();
