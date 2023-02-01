@@ -1,13 +1,13 @@
-# express-parameter-polution
+# express-parameter-polution-preventer
 
-this is an express parameter polution sanitize
+this is an express parameter polution preventer
 
 works array nested in an object query
 
 install it
 
 ```
-npm i express-parameter-polution
+npm i express-parameter-polution-preventer
 ```
 
 and then Just import it
@@ -15,7 +15,7 @@ and then Just import it
 CJS :
 
 ```
-const EPP = require("express-parameter-polution");
+const EPPP = require("express-parameter-polution-preventer");
 ```
 
 or
@@ -23,13 +23,13 @@ or
 ES6 :
 
 ```
-import EPP from "express-parameter-polution";
+import EPPP from "express-parameter-polution-preventer";
 ```
 
 then use it with
 
 ```
-app.use(EPP());
+app.use(EPPP());
 ```
 
 # Options
@@ -37,7 +37,7 @@ app.use(EPP());
 you can attach an options in the middleware example :
 
 ```
-app.use(EPP(
+app.use(EPPP(
     {
         join:false,
         whitelist: ["price"]
@@ -48,7 +48,7 @@ app.use(EPP(
 or
 
 ```
-app.use(EPP(
+app.use(EPPP(
     {
         join:["price"]
     }
@@ -58,7 +58,7 @@ app.use(EPP(
 #### Options Explanation
 
 ```
-app.use(EPP(
+app.use(EPPP(
     {
         // Join The Array Parameter
         // Pass an boolean value or pass an Array to customize which parameter you want to join
